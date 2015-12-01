@@ -6,7 +6,7 @@ interface BestBuyCalculator{
 interface BB_PriceCalculator extends BestBuyCalculator{
 	//This is meant for lowest price calculations.Includes discounts.
 	function _compareForLeast(...$prices);
-	function _applyDiscount_ComparePrices(...$prices);
+	function _applyDiscount_ComparePrices(...$Product);
 }
 
 interface BB_QualityCalculator extends BestBuyCalculator{
