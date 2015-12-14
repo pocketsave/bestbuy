@@ -1,0 +1,62 @@
+.srch-wdgt-search {
+    position: relative;
+    float: center;
+    left: 300px;
+    width: 5000px;
+    height: 38px;
+    margin: 10px 0;
+    
+    
+    background: #e9ebef;
+    color: #717171;
+}
+
+.srch-wdgt-submit {
+    position: relative;
+    float: center;
+    left: 300px;
+    width: 100px;
+    height: 38px;
+    margin: 10px 0;
+    
+    
+    background: #A52A2A;
+    color: white;
+}
+
+.nav-background {
+    
+    background: #A52A2A;
+     
+}
+
+.main-border{
+    width: 744px;
+    height: 472px;
+       padding: 0 15px 15px 15px;
+}
+.all-categories{
+    width: 220px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.product-category{
+ 
+}
+
+.product-category-name{
+    font-size: 12px;
+    text-overflow: ellipsis;
+    display: block;
+    height: 16.5px;
+    white-space: nowrap;
+    text-transform: capitalize
+}
+
+.Offer-Scroll{
+    
+ width: 620px;
+ height: 500px;
+
+}
