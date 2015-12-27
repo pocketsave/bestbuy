@@ -1,0 +1,31 @@
+#myCarousel .item
+{
+	height: 250px;
+}
+#slide1
+{
+	background: url("../img/1.jpg") top left no-repeat;
+}
+#slide2
+{
+	background-image: url("../img/2.jpg");
+	background-repeat: no-repeat;
+}
+#slide3
+{
+	background-image: url("../img/3.jpg");
+	background-repeat: no-repeat;
+}
+footer
+{
+	background: #333;
+	color: #eee;
+    font-family: cursive;
+	font-size: 15px;
+	padding: 20px;
+}
+.unstyled
+{
+	list-style: none;
+	padding: 0px;
+}
