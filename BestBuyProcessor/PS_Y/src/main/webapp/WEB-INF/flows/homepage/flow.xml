@@ -12,7 +12,11 @@
 	</view-state>
 
 	<view-state id="hello" view="hello">
-		<transition on="confirm" to="success" />
+
+		<transition on="confirm" to="success" >
+			<evaluate expression="customerdetails.printHello()" />
+		</transition>
+		
 		<transition on="cancel" to="cancel" />
 	</view-state>
 

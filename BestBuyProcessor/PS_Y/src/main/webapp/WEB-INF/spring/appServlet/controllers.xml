@@ -14,11 +14,12 @@
 	<!-- Here we can write our own pocketsave controllers -->
 	
 	<mvc:view-controller path="/homepage" view-name="homepage" />
-		<mvc:view-controller path="/hello" />
+	
 	
 
 
 	<!-- Below one scans this path: com\pocketsave\subsystem_two -->
 	<context:component-scan base-package="com.pocketsave.subsystem_two" />
-
-</beans>
+	<bean id="customerdetails" class="com.pocketsave.subsystem_two.CustomerDetails"/>
+    
+    </beans>
