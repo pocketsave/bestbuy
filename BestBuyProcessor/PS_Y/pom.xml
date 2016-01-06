@@ -9,7 +9,8 @@
 	<url>http://maven.apache.org</url>
 
 
-	<!-- Date: 26/12/2015, Author: Santosh Kumar, Comment: Used latest Spring GA available i.e., 4.2.2 -->
+	<!-- Date: 26/12/2015, Author: Santosh Kumar, Comment: Used latest Spring 
+		GA available i.e., 4.2.2 -->
 
 	<!-- Shared version number properties -->
 	<properties>
@@ -18,6 +19,7 @@
 		<springwebflow-version>2.4.2.RELEASE</springwebflow-version>
 		<springsecurity-version>4.0.1.RELEASE</springsecurity-version>
 		<org.slf4j-version>1.7.6</org.slf4j-version>
+		<kundera.version>3.2</kundera.version>
 	</properties>
 	<dependencies>
 		<!-- Core utilities used by other modules. Define this if you use Spring 
@@ -191,6 +193,13 @@
 			</exclusions>
 		</dependency>
 
+		<!-- Kundera-cassandra dependency -->
+		<dependency>
+			<groupId>com.impetus.kundera.client</groupId>
+			<artifactId>kundera-cassandra</artifactId>
+			<version>${kundera.version}</version>
+		</dependency>
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -272,8 +281,9 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>4.1.0.Beta1</version>
+			<version>5.2.2.Final</version>
 		</dependency>
+
 		<!-- JUNIT Testing -->
 		<dependency>
 			<groupId>junit</groupId>

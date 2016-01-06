@@ -14,7 +14,7 @@
 	<view-state id="hello" view="hello">
 
 		<transition on="confirm" to="success" >
-			<evaluate expression="customerdetails.printHello()" />
+			<evaluate expression="customerservice.register()" />
 		</transition>
 		
 		<transition on="cancel" to="cancel" />

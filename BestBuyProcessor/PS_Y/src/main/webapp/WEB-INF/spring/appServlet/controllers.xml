@@ -19,7 +19,11 @@
 
 
 	<!-- Below one scans this path: com\pocketsave\subsystem_two -->
-	<context:component-scan base-package="com.pocketsave.subsystem_two" />
+	<context:component-scan base-package="com.pocketsave" />
 	<bean id="customerdetails" class="com.pocketsave.subsystem_two.CustomerDetails"/>
+	<bean id="customer" class="com.pocketsave.entities.Customer"/>
+	<bean id="customerservice" class="com.pocketsave.service.CustomerService"/>
+	<bean id="customerdao" class="com.pocketsave.dao.CustomerDAO"/>
+	
     
     </beans>
