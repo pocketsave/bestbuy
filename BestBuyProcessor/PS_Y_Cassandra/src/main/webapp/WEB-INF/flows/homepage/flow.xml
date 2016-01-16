@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/webflow 
+		http://www.springframework.org/schema/webflow/spring-webflow.xsd">
+
+	<view-state id="signup_form" view="homepage">
+		<transition on="submit" to="hello" />
+		<transition on="cancel" to="cancel" />
+
+	</view-state>
+
+	<view-state id="hello" view="hello">
+
+		<transition on="confirm" to="success" >
+			<evaluate expression="customerservice.register()" />
+		</transition>
+		
+		<transition on="cancel" to="cancel" />
+	</view-state>
+
+	<end-state id="success" view="success" />
+
+	<end-state id="cancel" view="cancel" />
+
+</flow>
