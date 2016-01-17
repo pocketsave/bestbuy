@@ -328,9 +328,9 @@
 	return false;
 	} 
 	
-	if(true){
-		return true;
-	}
+ 
+	return true;
+	 
 	}
 	
 	
