@@ -1,1 +1,1 @@
-Hey Signup Cancelled dude
+<h1>Hey Signup Cancelled dude</h1>

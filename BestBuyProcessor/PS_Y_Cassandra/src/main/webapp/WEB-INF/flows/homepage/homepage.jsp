@@ -261,50 +261,36 @@
 				</div>
 				<!--modal header end-->
 				<div class="modal-body">
-					<form class="form-horizontal" id="signup_form" action="${flowExecutionUrl}" method="POST" >
+					<form class="form-horizontal" id="signup_form" action="${flowExecutionUrl}" method="POST" onsubmit="return validateSignup()">
 					            					
 							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 					
 						<div class="form-group">
-							<label class="col-md-4 col-md-offset-1">Firstname:</label>
+							<label class="col-md-4 col-md-offset-1"></label>
 							<div class="col-md-5">
-								<input type="text" class="form-control input-sm">
+								<input type="text" id="username" name="Username" placeholder="Username" class="form-control input-sm">
 							</div>
 						</div>
-						<div class="form-group">
-							<label class="col-md-4 col-md-offset-1">Lastname:</label>
+						 
+						 <div class="form-group">
+							<label class="col-md-4 col-md-offset-1"></label>
 							<div class="col-md-5">
-								<input type="text" class="form-control input-sm">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-md-4 col-md-offset-1">Password:</label>
-							<div class="col-md-5">
-								<input type="password" class="form-control input-sm">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-md-4 col-md-offset-1">Confirm Password:</label>
-							<div class="col-md-5">
-								<input type="password" class="form-control input-sm">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-md-4 col-md-offset-1">Email:</label>
-							<div class="col-md-5">
-								<input type="email" class="form-control input-sm">
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-md-4 col-md-offset-1">Mobile:</label>
-							<div class="col-md-5">
-								<input type="text" class="form-control input-sm">
+								<input type="email" id="email" name="Email" placeholder="Email" class="form-control input-sm">
 							</div>
 						</div>
 						
+						<div class="form-group">
+							<label class="col-md-4 col-md-offset-1"></label>
+							<div class="col-md-5">
+								<input type="password" id="password" name="Password" placeholder="Password" class="form-control input-sm">
+							</div>
+						</div>
+						 
+						
+												
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 					<button type="submit" id="submit" name="_eventId_submit" class="btn btn-success">submit</button>
-	</form>
+	 			</form>
 					<!--signup form end-->
 				</div>
 				<!--modal-body end-->
@@ -318,6 +304,37 @@
 	</div>
 	<!--signup popup end-->
 
+
+	
+	<script>
+	
+	function validateSignup(){
+	var username = document.getElementById('username').value;
+	var email = document.getElementById('email').value;
+	var password = document.getElementById('password').value;
+	
+	if(username==""){
+	alert("Please fill username");
+	return false;
+	} 
+	
+	if(email==""){
+	alert("Please fill email");
+	return false;
+	} 
+	
+	if(password==""){
+	alert("Please fill password");
+	return false;
+	} 
+	
+	if(true){
+		return true;
+	}
+	}
+	
+	
+	</script>
 	<!--popup for loginForm-->
 	<div class="modal fade" id="loginForm">
 		<div class="modal-dialog">

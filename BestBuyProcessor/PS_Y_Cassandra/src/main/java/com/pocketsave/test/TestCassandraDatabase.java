@@ -2,7 +2,7 @@ package com.pocketsave.test;
 
 import org.springframework.data.cassandra.core.CassandraOperations;
 
-import com.pocketsave.entities.Employee;
+import com.pocketsave.entities.User;
 import com.pocketsave.subsystem_two.daoconfig.CassandraTemplateHelper;
 
 //Date: 16/01/2016 Author: Santosh Kumar 
@@ -11,10 +11,10 @@ import com.pocketsave.subsystem_two.daoconfig.CassandraTemplateHelper;
  * 1. Install Cassandra DBMS or change contactpoints in CassandraDaoConfig to point to a webhost server
  * 2. Create a keyspace named "pocketsave" in cassandra DBMS 
  * 3. Create a table with below structure.
- * CREATE TABLE Employee(
-   emp_id int PRIMARY KEY,
-   emp_name text,
-   emp_age varint);
+ * CREATE TABLE User(
+   Email text PRIMARY KEY,
+   Username text,
+   Password text);
  */
 
 public class TestCassandraDatabase {
@@ -24,6 +24,10 @@ public class TestCassandraDatabase {
 		
 		CassandraTemplateHelper dao = new CassandraTemplateHelper();
 		CassandraOperations cassandraoperations =dao.getCassandraTemplate();
-		cassandraoperations.insert(new Employee(1234567898, "Santosh", 40));
-	}
+		User user = new User();
+		user.setEmail("pocketsave100@gmail.com");
+		user.setPassword("savepocket");
+		user.setUsername("Pocketsave");
+		cassandraoperations.insert(user);
+	 }
 }
