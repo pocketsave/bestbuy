@@ -1,4 +1,4 @@
-<?php asdfasdfasdf
+<?php 
 class Product	{
 	 
 	//Code Conventions:
